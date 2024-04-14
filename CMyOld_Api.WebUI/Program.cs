@@ -1,7 +1,10 @@
+using CMyOld_Api.Infra.IoC;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddInfrastruture(builder.Configuration);
 
 var app = builder.Build();
 
